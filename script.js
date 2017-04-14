@@ -1,9 +1,6 @@
 const app = angular.module('App', []);
 
 app.controller('appCtrl', ['$scope', function($scope){
-	$scope.name = 'Sérgio Jr';
-
-// ============= JSON LD BEGIN =============
 
     $scope.jsonLdOptions = [
         {name: 'Negócio Local', value: 'LocalBusiness'},
@@ -26,10 +23,6 @@ app.controller('appCtrl', ['$scope', function($scope){
 
     $scope.setOpts();
 
-    $scope.createJsonLd = function(i, value) {
-        $scope.jsonFormated = [];
-        console.log('Key', i, 'Value', value);
-    }
     $scope.selectJsonLd = function(opt) {
         $scope.setOpts();
         $scope.type = opt.value;
@@ -86,9 +79,9 @@ app.controller('appCtrl', ['$scope', function($scope){
             args['@type'] = $scope.type;
             args[key] = obj[key];
             args[key]['@type'] = $scope.addType(key);
-            $scope.jsonFormated = JSON.stringify(args);
+            $scope.jsonFormated = JSON.stringify(args); 
+            $('#json').JSONView($scope.jsonFormated);
+            $('#json').JSONView('expand');
         }
     }
-
-// ============= JSON LD END =============
 }])

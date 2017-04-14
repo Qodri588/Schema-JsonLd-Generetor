@@ -3,6 +3,7 @@
 	padding:  0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
+	--color_theme: #4197c1;
 }
 
 html, body {
@@ -19,8 +20,94 @@ html, body {
 
 .title {
     font-weight: lighter;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     max-width: 600px;
     margin: 20px auto;
+}
+
+.prewiew {
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+a {
+	cursor: pointer;
+}
+
+.btn {
+    background: #4b8dad;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.column.form-json {
+	margin-bottom: 20px;
+}
+
+.author {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+/* Header */
+header h1 {
+	text-align: center;
+    padding: 20px 0;
+    color: var(--color_theme);
+}
+
+header ul {
+	text-align: center;
+}
+
+header li {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.p-content {
+	margin-bottom: 20px;
+}
+
+.p-content h2 {
+	color: var(--color_theme);
+}
+
+.p-content p {
+	font-size: 18px;
+}
+
+header li a {
+    text-decoration: none;
+    background: var(--color_theme);
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header li a {
+		margin-bottom: 0;
+	}
 }
