@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="dist/jquery.jsonview.js"></script>
 		<script type="text/javascript" src="angular.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="Plugins/prism.css">
 	</head>
 	<body ng-controller="appCtrl">
 		<div class="container">
@@ -438,26 +439,34 @@
 			</div>
 			<div class="p-content">
 				<h2>O que é</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Schema JsonLD é a nova forma de informar as informações do site para a indexação dos buscadores.</p>
 			</div>
 
 			<div class="p-content">
 				<h2>Como usar</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p>Copie o código gerado e cole dentro da tag head do seu site. 
 				</p>
+<pre><code class="language-markup">&lt;script type="application/ld+json">
+{
+	"@context": "http://www.schema.org",
+	"@type": "product",
+	"brand": "Marca",
+	"name": "Nome",
+	"image": "Imagem.jpg",
+	"description": "Descrição",
+	"aggregateRating": {
+		"ratingValue": "Avaliação",
+		"@type": "aggregateRating",
+		"reviewCount": "Views"
+	}
+}
+&lt;/script>
+</code></pre>
+<p>Para testar o que está sendo indexado do seu site, use o site www.googletools.com.br</p>
 			</div>
 			<p class="author">Desenvolvidor por Sérgio Junior</p>
 		</div>
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+		<script type="text/javascript" src="Plugins/prism.js"></script>
 	</body>
 </html>
